@@ -7,20 +7,20 @@
 <body>
   <div class="page02-01" hidden>
     <h1>PAGE 02-01</h1>
-    <h3>결제가 완료되면 아래의 버튼을 누르세요.</h3> 
+    <h3>결제가 완료되면 아래의 버튼을 누르세요.</h3>
     <input class="doneBtn" type="button" value="결제완료">
   </div>
 
   <div class="page02-02" hidden>
     <h1>PAGE 02-02</h1>
-    <h3>결제가 완료되면 아래의 버튼을 누르세요.</h3> 
+    <h3>결제가 완료되면 아래의 버튼을 누르세요.</h3>
     <input class="backButton" type="button" value="돌아가기">
   </div>
 
   <div class="test">
     <input type="button" value="상태점검">
   </div>
-  
+
   <script src="https://rawgit.com/joeunha/cdn/master/jquery-3.1.1.min.js"></script>
   <script>
     $(function() {
@@ -30,18 +30,18 @@
 
       $(elem).show();
 
-      $('.test > input').on('click', function() {  
-        window.open('http://localhost:4000/' + params.url);
+      $('.test > input').on('click', function() {
+        window.open('http://joeun.me/react-native-test/' + params.url);
       })
 
-      $('.doneBtn').on('click', function() { 
-        window.open('http://localhost:4000/page04');
+      $('.doneBtn').on('click', function() {
+        window.open('http://joeun.me/react-native-test/page04');
       })
 
       function getUrlParams() {
         var params = {};
-        window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) { 
-          params[key] = value; 
+        window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) {
+          params[key] = value;
         });
         return params;
       }
@@ -49,7 +49,7 @@
       if (!isAndroidApp) {
         window.open('http://localhost:4000/' + params.url + '?key=' + params.key, "_self");
       }
-      
+
     })
   </script>
 

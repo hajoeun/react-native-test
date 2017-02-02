@@ -22,7 +22,7 @@ export default class WebViewTest extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentURL: 'https://www.marpple.com'
+      currentURL: 'http://joeun.me/react-native-test/'
     }
   }
 
@@ -30,9 +30,9 @@ export default class WebViewTest extends Component {
     this.naviDetector = (e) => {
       var { url } = e;
       console.log(url);
-      // if (url !== this.state.currentURL && url !== 'http://localhost:4000/page04') {
-      //   Linking.openURL(url);
-      // }
+      if (url !== this.state.currentURL && url !== 'http://joeun.me/react-native-test/page04') {
+        Linking.openURL(url);
+      }
     }
   }
 
