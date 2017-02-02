@@ -20,8 +20,13 @@
   <script src="https://rawgit.com/joeunha/cdn/master/jquery-3.1.1.min.js"></script>
   <script>
     $(function() {
+      var isAndroidApp = document.getElementsByTagName('html')[0].classList.contains('android_app');
+
       $('.payBtn').on('click', function() {
         window.open('http://joeun.me/react-native-test/page02?url=page03&key=1234');
+      })
+      $('.checkBtn').on('click', function() {
+        alert(isAndroidApp);
       })
     })
   </script>
